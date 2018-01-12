@@ -1,0 +1,13 @@
+{% extends "../layout/main.html" %}
+{% block css %}
+{{ super() }}
+<link rel="stylesheet" href="/public/dist/css/modules/index.css?v={{ ctx.app.config.version }}">
+{% endblock %}
+{% block bodyer %}
+<h1>hello,world</h1>
+<h2>hello,world</h2>
+{% endblock %}
+{% block script %}
+{{ super() }}
+<script src="/public/dist/js/modules/index.js?v={{ ctx.app.config.version }}"></script>
+{% endblock %}

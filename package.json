@@ -1,0 +1,54 @@
+{
+  "name": "dawang",
+  "version": "1.0.0",
+  "description": "web game study",
+  "private": true,
+  "dependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.23.5",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "css-loader": "^0.28.8",
+    "egg": "^2.0.0",
+    "egg-scripts": "^2.1.0",
+    "egg-view-nunjucks": "^2.1.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.3.5",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.13.0",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^5.1.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "test": "npm run test_static && egg-scripts start --daemon --env=test",
+    "prod": "npm run prod_static && egg-scripts start --daemon --env=prod",
+    "server": "egg-bin dev",
+    "dev": "npm run server & npm run dev_static",
+    "test_static": "webpack --config ./static/build/webpack.test.config.js",
+    "prod_static": "webpack --config ./static/build/webpack.prod.config.js",
+    "dev_static": "webpack --watch --progress --config ./static/build/webpack.dev.config.js"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "dawang",
+  "license": "MIT"
+}

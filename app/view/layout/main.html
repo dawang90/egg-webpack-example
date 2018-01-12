@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ ctx.title }}顺网绝地求生饰品交易平台</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% block css %}
+        <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/public/dist/css/common.css?={{ ctx.app.config.version }}">
+        {% endblock %}
+    </head>
+    <body>
+        <div class="wraper">
+            {% block header %}
+                
+            {% endblock %}
+            {% block bodyer %}
+                <div class="container">
+
+                </div>
+            {% endblock %}
+            {% block footer %}
+
+            {% endblock %}
+            {% block script %}
+                <script src="/public/js/jquery.min.js"></script>
+                <script src="/public/dist/js/common.js?={{ ctx.app.config.version }}"></script>
+            {% endblock %}
+        </div>
+    </body>
+</html>
