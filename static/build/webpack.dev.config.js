@@ -20,9 +20,9 @@ module.exports = merge(baseWebpackConfig, {
     }),
     new BroserSyncPlugin({
       open: 'external',
-      host: 'sw.c5game.cn',
+      host: '127.0.0.1',
       proxy: {
-        target: 'sw.c5game.cn',
+        target: '127.0.0.1:7001',
         // ws: true
       },
       // browser: "google chrome"
